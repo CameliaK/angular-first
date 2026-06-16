@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start *)",
+      "Bash(tee /tmp/ng-serve.log)",
+      "Bash(disown)",
+      "Read(//private/tmp/**)",
+      "Bash(break)",
+      "Bash(python3 -)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-sandbox --window-size=1400,900 --screenshot=/tmp/navbar-wide.png http://localhost:4200/)",
+      "Bash(echo \"exit=$?\")",
+      "Read(//tmp/**)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-sandbox --window-size=800,900 --screenshot=/tmp/navbar-narrow.png http://localhost:4200/)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-sandbox --virtual-time-budget=5000 --dump-dom http://localhost:4200/)",
+      "Bash(sips -c 60 1400 -o /tmp/navbar-crop.png /tmp/navbar-wide2.png)",
+      "Bash(sips -z 240 1400 /tmp/navbar-crop.png --out /tmp/navbar-crop2.png)",
+      "Bash(python3 *)",
+      "Bash(sips -c 60 1400 --padToHeightWidth 60 1400 --cropOffset 0 0 /tmp/navbar-wide2.png --out /tmp/navbar-crop3.png)",
+      "Bash(sips -g pixelHeight -g pixelWidth /tmp/navbar-wide2.png)",
+      "Bash(sed -i '' 's#http://localhost:4200/styles.css#file:///Users/kirbithalbertocubillashernandez/Desktop/Projects/AngularProject/AngularFirst/node_modules/bootstrap/dist/css/bootstrap.min.css#' /tmp/test-bootstrap-only.html)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-sandbox --window-size=1400,150 --screenshot=/tmp/combined.png file:///tmp/test-combined.html)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-sandbox --window-size=1400,150 --screenshot=/tmp/bootstraponly.png file:///tmp/test-bootstrap-only.html)",
+      "Bash(curl -s http://localhost:4200/styles.css)",
+      "Bash(curl -s http://localhost:4200/styles.css -o /tmp/styles2.css)"
+    ]
+  }
+}
