@@ -1,0 +1,50 @@
+<div class="container">
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <h2 class="text-center m-2">Reactive form User Information</h2>
+        <div class="form-group m-2">
+            <label>Firts Name</label>
+            <input type="text" class="form-control" placeholder="Enter Fist Name" formControlName="firstName">
+        </div>
+        
+        <div class="form-group m-2">
+            <label>Last Name</label>
+            <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="lastName">
+        </div>
+
+        <div class="form-group m-2">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Enter Email Adress" formControlName="email">
+        </div>
+
+        <div class="form-group m-2">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
+        </div>
+
+        <div class="form-check m-2">
+            <label>Check me out</label>
+            <input type="checkbox" class="form-checked-input" name="isChecked" formControlName="isChecked">
+        </div>
+
+        <div class="m-2" formGroupName="address">
+            <h5 class="m-2">Address</h5>
+
+            <div class="form-group m-2">
+                <label>City</label>
+                <input type="text" class="form-control" placeholder="Enter your City" formControlName="city">
+            </div>
+
+            <div class="form-group m-2">
+                <label>Street</label>
+                <input type="text" class="form-control" placeholder="Enter Street" formControlName="street">
+            </div>
+
+            <div class="form-group m-2">
+                <label>Pincode</label>
+                <input type="text" class="form-control" placeholder="Enter Pincode" formControlName="pincode">
+            </div>
+        </div>
+
+        <button class="btn btn-success m-2" type="submit">Submit</button>
+    </form>
+</div>
